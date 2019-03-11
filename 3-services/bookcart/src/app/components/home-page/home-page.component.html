@@ -9,8 +9,9 @@
   <div>{{book.price}}</div>
   <div>{{book.rating}}</div>
   <div>
-    <button (click)="rateUp(book)">+</button>
-    <button (click)="rateDown(book)">-</button>
+    <button (click)="rateUp(book)">&uarr;</button>
+    <button (click)="rateDown(book)">&darr;</button>
+    <button (click)="addToCart(book)">+</button>
   </div>
 </div>
 

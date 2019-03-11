@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BookService {
-  books: Book[];
+  private books: Book[];
 
-  constructor() { 
+  constructor() {
     this.books = [
       new Book(
         'The Alchemist',
@@ -34,5 +34,19 @@ export class BookService {
         5
       )
     ];
+  }
+
+  getBooks() {
+    return this.books;
+  }
+
+  rateUp(book: Book) {
+    if (book.rating < 5)
+      book.rating++;
+  }
+
+  rateDown(book: Book) {
+    if (book.rating > 1)
+      book.rating--;
   }
 }

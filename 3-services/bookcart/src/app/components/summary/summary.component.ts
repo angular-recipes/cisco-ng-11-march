@@ -10,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class SummaryComponent implements OnInit {
   books: Book[];
   firstBookRating: number;
-
-  constructor(public bookService: BookService) {
-   }
+  bookService;
+  constructor(bookService: BookService) {
+    this.bookService = bookService;
+  }
 
   ngOnInit() {
     this.firstBookRating = this.bookService.books[0].rating;

@@ -1,3 +1,4 @@
+import { CartService } from './../../services/cart.service';
 import { BookService } from './../../services/book.service';
 import { Book } from './../../models/book';
 import { Component, OnInit } from '@angular/core';
@@ -9,24 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
   books: Book[];
-  bookService: BookService;
 
-  constructor(bookService: BookService) {
-    this.bookService = bookService;
+  constructor(
+    private bookService: BookService,
+    private cartService: CartService  
+  ) {
+    
   }
 
   rateUp(book) {
-    if(book.rating < 5)
-      book.rating++;
+    this.bookService.rateUp(book);
   }
 
   rateDown(book) {
-    if(book.rating > 1)
-      book.rating--;
+    this.bookService.rateDown(book);
+  }
+
+  addToCart(book) {
+    this.cartService.addToCart(book);
   }
 
   ngOnInit() {
-    this.books = this.bookService.books;
+    this.books = this.bookService.getBooks();
   }
 
 }
