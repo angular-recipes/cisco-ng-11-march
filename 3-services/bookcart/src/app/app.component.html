@@ -1,0 +1,5 @@
+<h2>{{title}}</h2>
+
+<button (click)="showBooks=!showBooks">toggle</button>
+<app-summary></app-summary>
+<app-home-page *ngIf="showBooks"></app-home-page>
