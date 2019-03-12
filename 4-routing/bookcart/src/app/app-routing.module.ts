@@ -1,3 +1,4 @@
+import { BookDetailsPageComponent } from './components/book-details-page/book-details-page.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: 'contact', component: ContactPageComponent},
   {path: 'home', component: HomePageComponent},
   {path: 'summary', component: SummaryComponent},
-  {path: 'cart', component: ShoppingCartComponent}
+  {path: 'cart', component: ShoppingCartComponent},
+  {path: 'book/:id', component: BookDetailsPageComponent}
 ];
 
 @NgModule({

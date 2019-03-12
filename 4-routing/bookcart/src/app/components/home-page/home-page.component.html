@@ -4,7 +4,7 @@
   [hidden]="book.rating < 2"
   [class.high]="book.rating == 5"
 >
-  <div class="title">{{book.title}}</div>
+  <a class="title" routerLink="/book/{{book.id}}">{{book.title}}</a>
   <div class="author">{{book.author}}</div>
   <div>{{book.price}}</div>
   <div>{{book.rating}}</div>
