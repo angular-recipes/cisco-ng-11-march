@@ -8,7 +8,7 @@
   <a class="title" routerLink="/book/{{book.id}}">{{book.title | titlecase}}</a>
   <div class="author">{{book.author | lastNameFirst:'|'}}</div>
   <div>{{book.price | currency:'EUR':true:'2.2-3'}}</div>
-  <div>{{book.rating | number:'1.2-2'}}</div>
+  <div [highlight]="book.price < 25 ? 'green' : highlightColor">{{book.rating | number:'1.2-2'}}</div>
   <div>
     <button (click)="rateUp(book)">&uarr;</button>
     <button (click)="rateDown(book)">&darr;</button>

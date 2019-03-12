@@ -14,6 +14,7 @@ import { AddBookPageComponent } from './components/add-book-page/add-book-page.c
 import { Below30Directive } from './directives/below30.directive';
 import { LessThanDirective } from './directives/less-than.directive';
 import { LastNameFirstPipe } from './pipes/last-name-first.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LastNameFirstPipe } from './pipes/last-name-first.pipe';
     AddBookPageComponent,
     Below30Directive,
     LessThanDirective,
-    LastNameFirstPipe
+    LastNameFirstPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
