@@ -1,3 +1,4 @@
+import { AddBookTRVPageComponent } from './components/add-book-trvpage/add-book-trvpage.component';
 import { AddBookPageComponent } from './components/add-book-page/add-book-page.component';
 import { BookDetailsPageComponent } from './components/book-details-page/book-details-page.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'summary', component: SummaryComponent},
   {path: 'cart', component: ShoppingCartComponent},
   {path: 'add-book', component: AddBookPageComponent},
+  {path: 'add-book-trv', component: AddBookTRVPageComponent},
   {path: 'book/:id', component: BookDetailsPageComponent}
 ];
 

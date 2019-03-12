@@ -36,4 +36,8 @@ export class HomePageComponent implements OnInit {
     this.books = this.bookService.getBooks();
   }
 
+  print(t, i) {
+    console.log(t.innerHTML, i.value);
+  }
+
 }

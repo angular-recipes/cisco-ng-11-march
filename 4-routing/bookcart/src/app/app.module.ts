@@ -15,6 +15,7 @@ import { Below30Directive } from './directives/below30.directive';
 import { LessThanDirective } from './directives/less-than.directive';
 import { LastNameFirstPipe } from './pipes/last-name-first.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
+import { AddBookTRVPageComponent } from './components/add-book-trvpage/add-book-trvpage.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     Below30Directive,
     LessThanDirective,
     LastNameFirstPipe,
-    HighlightDirective
+    HighlightDirective,
+    AddBookTRVPageComponent
   ],
   imports: [
     BrowserModule,
