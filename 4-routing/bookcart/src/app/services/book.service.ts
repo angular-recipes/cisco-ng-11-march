@@ -44,6 +44,10 @@ export class BookService {
     return this.books.find(b => b.id == id);
   }
 
+  addBook(book: Book) {
+    this.books.unshift(book);
+  }
+
   rateUp(book: Book) {
     if (book.rating < 5)
       book.rating++;

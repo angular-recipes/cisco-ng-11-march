@@ -1,3 +1,4 @@
+import { AddBookPageComponent } from './components/add-book-page/add-book-page.component';
 import { BookDetailsPageComponent } from './components/book-details-page/book-details-page.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { SummaryComponent } from './components/summary/summary.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'home', component: HomePageComponent},
   {path: 'summary', component: SummaryComponent},
   {path: 'cart', component: ShoppingCartComponent},
+  {path: 'add-book', component: AddBookPageComponent},
   {path: 'book/:id', component: BookDetailsPageComponent}
 ];
 
