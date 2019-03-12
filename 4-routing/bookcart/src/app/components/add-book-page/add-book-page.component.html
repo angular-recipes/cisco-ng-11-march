@@ -22,7 +22,12 @@
   </div>
   <div>
     Price:
-    <input name="price" type="text" [(ngModel)]="newBook.price" />
+    <input #price="ngModel" name="price" type="text" [(ngModel)]="newBook.price" lessThan="80"/>
+    <div *ngIf="price.invalid && (price.touched || price.dirty)">
+        <div *ngIf="price.errors.lessThan" class="error">
+          {{price.errors.lessThan}}
+        </div>
+    </div>
   </div>
   <div>
     Rating:
