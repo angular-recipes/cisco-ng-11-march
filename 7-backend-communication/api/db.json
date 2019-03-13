@@ -1,0 +1,32 @@
+{
+  "books": [
+    {
+      "title": "Power of now",
+      "author": "Eckhart tolle",
+      "price": 23,
+      "rating": 4,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "5 point someone",
+      "author": "Chetan Bhagat",
+      "price": 13,
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "title": "The monk who sold his ferrari",
+      "author": "Robin Sharma",
+      "price": 22,
+      "rating": 4
+    },
+    {
+      "title": "The Alchemist",
+      "author": "Paulo cohelo",
+      "price": 33,
+      "rating": 3,
+      "id": 4
+    }
+  ]
+}
