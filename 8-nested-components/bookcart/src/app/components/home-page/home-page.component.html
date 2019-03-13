@@ -1,0 +1,12 @@
+{{today | date:'dd ** MM ** yyyy hh::mm::ss'}}
+
+<div *ngFor="let b of books">
+
+  <app-book-item 
+    [book]="b"
+    (rateUpBtnClick)="rateUp($event)"
+    (rateDownBtnClick)="rateDown($event)"
+    (addToCartBtnClick)="addToCart($event)"
+  ></app-book-item>
+
+</div>

@@ -1,0 +1,16 @@
+<div 
+  class="book" 
+  [hidden]="book.rating < 2"
+  [class.high]="book.rating == 5"
+>
+  <a *ngIf="!showTitleAsText" class="title" routerLink="/book/{{book.id}}">{{book.title | titlecase}}</a>
+  <div *ngIf="showTitleAsText" class="title">{{book.title | titlecase}}</div>
+  <div class="author">{{book.author | lastNameFirst:'|'}}</div>
+  <div>{{book.price | currency:'EUR':true:'2.2-3'}}</div>
+  <div [highlight]="book.price < 25 ? 'green' : highlightColor">{{book.rating | number:'1.2-2'}}</div>
+  <div *ngIf="!hideButtons">
+    <button (click)="onRateUpBtnClick()">&uarr;</button>
+    <button (click)="onRateDownBtnClick()">&darr;</button>
+    <button (click)="onAddToCartBtnClick()">+</button>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div *ngIf="book">
+    <app-book-item 
+        [book]="book" 
+        [hideButtons]="true"
+        [showTitleAsText]="true"
+    >
+    </app-book-item>
+</div>
+<button (click)="goHome()">Go home</button>
