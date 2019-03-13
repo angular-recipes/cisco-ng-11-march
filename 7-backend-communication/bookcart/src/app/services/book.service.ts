@@ -19,7 +19,7 @@ export class BookService {
   }
 
   getBookById(id) {
-    return this.books.find(b => b.id == id);
+    return this.http.get(this.url + id);
   }
 
   addBook(book: Book) {
